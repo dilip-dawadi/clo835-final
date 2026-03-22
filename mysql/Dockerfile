@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:8.0
 
 ENV MYSQL_ROOT_PASSWORD=pw
 ENV MYSQL_DATABASE=employees
