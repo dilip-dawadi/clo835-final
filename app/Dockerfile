@@ -1,8 +1,4 @@
-FROM python:3.9-slim
-
-RUN apt-get update && \
-    apt-get install -y iputils-ping && \
-    rm -rf /vsr/lib/apt/lists/*
+FROM python:3.11-slim
 
 WORKDIR /app
 
@@ -11,6 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8080
+RUN mkdir -p /app/static/downloads
 
-CMD ["python3", "app.py"]
+EXPOSE 81
+
+CMD ["python", "app.py"]
