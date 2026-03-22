@@ -1,0 +1,9 @@
+# Kubernetes ConfigMap manifest
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: clo835
+data:
+  APP_COLOR: "blue"
+  AWS_REGION: "us-east-1"
