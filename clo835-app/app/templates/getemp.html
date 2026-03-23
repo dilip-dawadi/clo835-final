@@ -8,7 +8,9 @@
       <h1 style="color: DodgerBlue">Employee Information</h1>
 
       <body
-        style="background: {{ color }};             {% if background_image %}
+        style="background: {{ color }};   
+        height: 100vh;
+        {% if background_image %}
             background-image: url('{{ background_image }}');
             background-size: cover;
             background-repeat: no-repeat;
