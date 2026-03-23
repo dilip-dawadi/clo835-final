@@ -4,10 +4,10 @@ metadata:
   name: app-config
   namespace: final
 data:
-  APP_COLOR: "blue"
+  APP_COLOR: "pink"
   AWS_REGION: "us-east-1"
   MY_NAME: "Group 9"
-  BG_IMAGE_URL: "s3://final-project-clo835-g9/24701-nature-natural-beauty.jpg"
+  BG_IMAGE_URL: "s3://final-project-clo835-g9/pink.jpg"
   DBHOST: "mysql"
   DBPORT: "3306"
   DATABASE: "employees"
