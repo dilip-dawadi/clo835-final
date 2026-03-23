@@ -1,9 +1,13 @@
-# Kubernetes ConfigMap manifest
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app-config
-  namespace: clo835
+  namespace: final
 data:
   APP_COLOR: "blue"
   AWS_REGION: "us-east-1"
+  MY_NAME: "Dilip"
+  BG_IMAGE_URL: "s3://final-project-clo835-g9/24701-nature-natural-beauty.jpg"
+  DBHOST: "mysql"
+  DBPORT: "3306"
+  DATABASE: "employees"
