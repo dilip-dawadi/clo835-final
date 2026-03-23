@@ -14,7 +14,7 @@ DATABASE = os.environ.get("DATABASE", "employees")
 DBPORT = int(os.environ.get("DBPORT", 3306))
 
 APP_COLOR = os.environ.get("APP_COLOR", "lime")
-MY_NAME = os.environ.get("MY_NAME", "Roshan")
+MY_NAME = os.environ.get("MY_NAME", "Group 9")
 BG_IMAGE_URL = os.environ.get("BG_IMAGE_URL", "")
 AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
 
