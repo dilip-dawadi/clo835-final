@@ -16,7 +16,7 @@ spec:
       serviceAccountName: app-sa
       containers:
         - name: webapp
-          image: 677868816391.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:v2
+          image: 677868816391.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
           ports:
             - containerPort: 81
           env:
