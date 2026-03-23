@@ -36,6 +36,6 @@ jobs:
 
       - name: Build & Push MySQL
         run: |
-          docker build -t clo835-mysql:${{ env.IMAGE_TAG }} ./clo835-mysql/mysql
+          docker build -t clo835-mysql:${{ env.IMAGE_TAG }} ./clo835-app/mysql
           docker tag clo835-mysql:${{ env.IMAGE_TAG }} ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/clo835-mysql:${{ env.IMAGE_TAG }}
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/clo835-mysql:${{ env.IMAGE_TAG }}
