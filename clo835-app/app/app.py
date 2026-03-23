@@ -100,6 +100,16 @@ def AddEmp():
     primary_skill = request.form["primary_skill"]
     location = request.form["location"]
 
+    # Input validation: do not insert if any field is empty
+    if not all([emp_id, first_name, last_name, primary_skill, location]):
+        return render_template(
+            "addempoutput.html",
+            name="Input Error: All fields are required!",
+            color=color_codes[COLOR],
+            my_name=MY_NAME,
+            background_image=BACKGROUND_IMAGE
+        )
+
     insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
     conn = get_db_connection()
     cursor = conn.cursor()
