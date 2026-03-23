@@ -6,7 +6,7 @@ metadata:
 data:
   APP_COLOR: "blue"
   AWS_REGION: "us-east-1"
-  MY_NAME: "Dilip"
+  MY_NAME: "Group 9"
   BG_IMAGE_URL: "s3://final-project-clo835-g9/24701-nature-natural-beauty.jpg"
   DBHOST: "mysql"
   DBPORT: "3306"
