@@ -19,6 +19,11 @@ spec:
           image: 677868816391.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
           ports:
             - containerPort: 81
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "200m"
           env:
             - name: DBHOST
               valueFrom:
