@@ -17,6 +17,7 @@ spec:
       containers:
         - name: webapp
           image: 677868816391.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 81
           resources:
