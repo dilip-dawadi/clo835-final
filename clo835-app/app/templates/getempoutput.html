@@ -1,35 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-	<title>Employee Information</title>
-</head>
-<center>
-	<font color="black" size="5" style="font-family: avenir">
+  <head>
+    <title>Employee Information</title>
+  </head>
+  <center>
+    <font color="black" size="5" style="font-family: avenir">
+      <h1 style="color: DodgerBlue">Employee Information</h1>
 
-		<h1 style="color: DodgerBlue">Employee Information</h1>
+      <body
+        style="background: {{ color }};             {% if background_image %}
+            background-image: url('{{ background_image }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            {% endif %}"
+      >
+        <form>
+          <div>
+            Employee ID:<br />
+            {{ id }} <br /><br />
 
-		<body style="background: {{ color }};">
+            First Name:<br />
+            {{ fname }} <br /><br />
 
-			<form>
+            Last Name:<br />
+            {{ lname }} <br /><br />
 
-				<div>
+            Primary Interest:<br />
+            {{ interest }} <br /><br />
 
-			  		Employee ID:<br> {{ id }} <br><br>
-
-			  		First Name:<br> {{ fname }} <br><br>
-
-			  		Last Name:<br> {{ lname }} <br><br>
-
-			  		Primary Interest:<br> {{ interest }} <br><br>
-
-			  		Location:<br> {{ location }} <br><br>
-			  		
-			  	</div>
-
-			</form>
-			<a href="{{ url_for('home') }}">Back</a>
-		</body>
-
-	</font>
-</center>
+            Location:<br />
+            {{ location }} <br /><br />
+          </div>
+        </form>
+        <a href="{{ url_for('home') }}">Back</a>
+      </body>
+    </font>
+  </center>
 </html>
