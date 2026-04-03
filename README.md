@@ -7,3 +7,4 @@ This group project is a cloud application deployment assignment for CLO835. We b
 - Dilip Dawadi
 - Roshan Shrestha
 - Niroj Bahadur Bagale
+- Test
