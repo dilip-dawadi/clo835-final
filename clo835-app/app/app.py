@@ -48,8 +48,11 @@ def get_db_connection():
 
 
 def download_s3_image():
+    if not BG_IMAGE_URL:
+        return None
+
     if not BG_IMAGE_URL.startswith("s3://"):
-        print(f"BG_IMAGE_URL is invalid or empty: {BG_IMAGE_URL}")
+        print(f"BG_IMAGE_URL is invalid: {BG_IMAGE_URL}")
         return None
 
     try:
