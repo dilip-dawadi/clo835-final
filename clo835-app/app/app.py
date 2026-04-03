@@ -21,6 +21,7 @@ AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
 LOCAL_IMAGE_DIR = "static/downloads"
 LOCAL_IMAGE_NAME = "background.jpg"
 LOCAL_IMAGE_PATH = os.path.join(LOCAL_IMAGE_DIR, LOCAL_IMAGE_NAME)
+LOCAL_IMAGE_WEB_PATH = f"/{LOCAL_IMAGE_PATH}"
 
 table = "employee"
 
@@ -72,7 +73,22 @@ def download_s3_image():
         return None
 
 
-BACKGROUND_IMAGE = download_s3_image()
+def resolve_background_image():
+    if BG_IMAGE_URL:
+        s3_image = download_s3_image()
+        if s3_image:
+            return s3_image
+
+    # Local fallback for Docker/local testing if a bundled image exists.
+    if os.path.exists(LOCAL_IMAGE_PATH):
+        print(f"Using bundled local background image: {LOCAL_IMAGE_WEB_PATH}")
+        return LOCAL_IMAGE_WEB_PATH
+
+    print("No background image configured.")
+    return None
+
+
+BACKGROUND_IMAGE = resolve_background_image()
 
 
 @app.route("/", methods=["GET", "POST"])
