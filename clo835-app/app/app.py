@@ -67,7 +67,7 @@ def download_s3_image():
 
         print(f"Background image URL: {BG_IMAGE_URL}")
         print(f"Downloaded image to: {LOCAL_IMAGE_PATH}")
-        return f"/{LOCAL_IMAGE_PATH}"
+        return LOCAL_IMAGE_WEB_PATH
     except (ValueError, ClientError, Exception) as e:
         print(f"Failed to download image from S3: {e}")
         return None
