@@ -18,10 +18,10 @@ MY_NAME = os.environ.get("MY_NAME", "Group 9")
 BG_IMAGE_URL = os.environ.get("BG_IMAGE_URL", "")
 AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
 
-LOCAL_IMAGE_DIR = "static/downloads"
 LOCAL_IMAGE_NAME = "background.jpg"
+LOCAL_IMAGE_DIR = os.path.join(app.root_path, "static", "downloads")
 LOCAL_IMAGE_PATH = os.path.join(LOCAL_IMAGE_DIR, LOCAL_IMAGE_NAME)
-LOCAL_IMAGE_WEB_PATH = f"/{LOCAL_IMAGE_PATH}"
+LOCAL_IMAGE_WEB_PATH = f"/static/downloads/{LOCAL_IMAGE_NAME}"
 
 table = "employee"
 
