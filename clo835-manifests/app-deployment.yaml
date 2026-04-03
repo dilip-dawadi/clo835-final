@@ -13,7 +13,7 @@ spec:
       labels:
         app: webapp
     spec:
-      serviceAccountName: app-sa
+      serviceAccountName: clo835
       containers:
         - name: webapp
           image: 677868816391.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
